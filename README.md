@@ -1,7 +1,7 @@
 # Healthcare_app
 A complete hospital management system in Java using FXML.
 
-Features :
+##Features :
 
 Keeping records of prescriptions and medical history.
 

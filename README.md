@@ -3,12 +3,12 @@ A complete hospital management system in Java using FXML.
 
 ##Features :
 
-Keeping records of prescriptions and medical history.
+*Keeping records of prescriptions and medical history.
 
-Keeping track of beds and availability of facilities.
+*Keeping track of beds and availability of facilities.
 
-Employment record of medical staff.
+*Employment record of medical staff.
 
-Payment details.
+*Payment details.
 
-Record of medicines / equipments etc. 
+*Record of medicines / equipments etc. 

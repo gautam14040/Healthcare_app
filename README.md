@@ -43,7 +43,7 @@ The designed relation is in BCNF
 
 	* contact
 
-3. Patient
+2. Patient
 
 	* p_id (Key)
 
@@ -53,24 +53,24 @@ The designed relation is in BCNF
 	
 	* dob
 	
-	* kin_name
+	* kin_id
 	
 	* prim_doctor (F key)
 
-4. Kin_data
+3. Kin_data
+
+	* kin_id
 	
 	* kin_name
 	
 	* kin_contact
 
 
-5. Appointments
+4. Appointments
 
 	* app_id (key)
 
 	* p_id (F key)
-	
-	* patient_name
 	
 	* emp_id(F key)
 	
@@ -110,8 +110,6 @@ The designed relation is in BCNF
  	
  	* is_paid
  	
- 	* methord
+ 	* method
  	
  	* discription
-
-

@@ -16,6 +16,7 @@ A complete hospital management system in Java using FXML.
 ##Database Design :
 
 1. Employee
+
 	* emp_id (Key)
 
 	* name
@@ -38,16 +39,13 @@ A complete hospital management system in Java using FXML.
 	
 	* avalible_Slot
 
-2. Admin
-	* username
-
 	* password
-	
-	* emp_id (F key)
-	
-	* rights
 
-3. Patient
+	*rights
+
+
+2. Patient
+
 	* p_id (Key)
 
 	* name
@@ -62,7 +60,8 @@ A complete hospital management system in Java using FXML.
 	
 	* prim_doctor (F key)
 
-4. Appointments
+3. Appointments
+
 	* app_id (key)
 
 	* p_id (F key)
@@ -87,7 +86,8 @@ A complete hospital management system in Java using FXML.
 	
 
 
-5. Equipments
+4. Equipments
+
 	* eq_id (key)
 
 	* emp_id (F key)
@@ -102,7 +102,8 @@ A complete hospital management system in Java using FXML.
 	
 	* is_booked
 
-6. Payment
+5. Payment
+
  	* pay_id (key)
 
  	* amount 

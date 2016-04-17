@@ -41,7 +41,7 @@ A complete hospital management system in Java using FXML.
 
 	* password
 
-	*rights
+	* rights
 
 
 2. Patient

@@ -36,58 +36,33 @@ The designed relation is in BCNF
 	* prim_doctor (F key)
 	* 
 3. Kin_data
-
 	* kin_id
-	
 	* kin_name
-	
 	* kin_contact
 
 
 4. Appointments
-
 	* app_id (key)
-
 	* p_id (F key)
-	
 	* emp_id(F key)
-	
 	* slot
-	
 	* date
-	
 	* discription
-	
 	* pay_id (F-key)
-	
 	* queue (int)
 	
-
-
 5. Equipments
-
 	* eq_id (key)
-
 	* emp_id (F key)
-	
 	* p_id (F key)
-	
 	* discription
-	
 	* start_slot
-	
 	* number_slots
-	
 	* is_booked
 
 6. Payment
-
  	* pay_id (key)
-
  	* amount 
- 	
  	* is_paid
- 	
  	* method
- 	
  	* discription

@@ -34,7 +34,7 @@ The designed relation is in BCNF
 	* dob
 	* kin_id
 	* prim_doctor (F key)
-	* 
+
 3. Kin_data
 	* kin_id
 	* kin_name

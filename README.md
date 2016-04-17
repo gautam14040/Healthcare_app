@@ -16,43 +16,27 @@ The designed relation is in BCNF
 1. Employee
 
 	* emp_id (Key)
-
 	* name
-	
 	* post
-	
 	* department
-	
 	* gender
-	
 	* rights
-	
 	* dob
-		
 	* slot
-	
 	* avalible_Slot
-
 	* password
-
 	* rights
-
 	* contact
 
 2. Patient
 
 	* p_id (Key)
-
 	* name
-	
 	* gender
-	
 	* dob
-	
 	* kin_id
-	
 	* prim_doctor (F key)
-
+	* 
 3. Kin_data
 
 	* kin_id

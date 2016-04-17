@@ -14,7 +14,6 @@ A complete hospital management system in Java using FXML.
 The designed relation is in BCNF
 
 1. Employee
-
 	* emp_id (Key)
 	* name
 	* post
@@ -29,7 +28,6 @@ The designed relation is in BCNF
 	* contact
 
 2. Patient
-
 	* p_id (Key)
 	* name
 	* gender

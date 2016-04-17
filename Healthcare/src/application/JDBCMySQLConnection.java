@@ -8,10 +8,10 @@ import java.sql.SQLException;
 public class JDBCMySQLConnection {
     //static reference to itself
     private static JDBCMySQLConnection instance = new JDBCMySQLConnection();
-    public static final String URL = "jdbc:mysql://localhost/jdbcdb";
+    public static final String URL = "jdbc:mysql://localhost/bedrock";
     public static final String USER = "root";
-    public static final String PASSWORD = "1234";
-    public static final String DRIVER_CLASS = "com.mysql.jdbc.Driver"; 
+    public static final String PASSWORD = "gautam1g";
+    public static final String DRIVER_CLASS = "com.mysql.jdbc.Driver"; 	
      
     //private constructor
     private JDBCMySQLConnection() {

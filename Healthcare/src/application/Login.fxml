@@ -6,18 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <AnchorPane layoutX="-3.0" layoutY="-7.0" prefHeight="463.0" prefWidth="486.0">
+      <AnchorPane id="Plane" layoutX="-3.0" layoutY="-7.0" prefHeight="463.0" prefWidth="486.0">
          <children>
             <Text layoutX="48.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Hospital Database Management System " />
-            <TextField fx:id="username" layoutX="222.0" layoutY="177.0" />
-            <PasswordField fx:id="password" layoutX="222.0" layoutY="240.0" />
+            <TextField id="username" fx:id="username" layoutX="222.0" layoutY="177.0" />
+            <PasswordField id="password" fx:id="password" layoutX="222.0" layoutY="240.0" />
             <Text layoutX="123.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
             <Text layoutX="125.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-            <Text fx:id="incorrect" layoutX="308.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-            <Button fx:id="login" layoutX="222.0" layoutY="290.0" mnemonicParsing="false" text="Login" />
+            <Button id="login" fx:id="login" layoutX="222.0" layoutY="290.0" mnemonicParsing="false" onAction="#login" text="Login" />
          </children>
       </AnchorPane>
    </children>

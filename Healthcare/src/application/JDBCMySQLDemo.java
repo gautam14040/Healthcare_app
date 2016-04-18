@@ -41,11 +41,11 @@ public class JDBCMySQLDemo {
              
             if (rs.next()) {
                 employee = new Employee();
-                employee.setEmpId(rs.getInt("emp_id"));
-                employee.setEmpName(rs.getString("emp_name"));
-                employee.setDob(rs.getDate("dob"));
-                employee.setSalary(rs.getDouble("salary"));
-                employee.setDeptId((rs.getInt("dept_id")));
+//                employee.setEmpId(rs.getInt("emp_id"));
+//                employee.setEmpName(rs.getString("emp_name"));
+//                employee.setDob(rs.getDate("dob"));
+//                employee.setSalary(rs.getDouble("salary"));
+//                employee.setDeptId((rs.getInt("dept_id")));
             }
         } catch (SQLException e) {
             e.printStackTrace();

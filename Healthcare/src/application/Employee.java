@@ -7,7 +7,7 @@ public class Employee {
     public int emp_id;
     public String emp_name;
     public String post;
-    public String department ;
+    public int dept_id ;
     public String gender ;
     public int rights ;
     public Date dob;
@@ -19,13 +19,13 @@ public class Employee {
 	public Employee() {
 		super();
 	}
-	public Employee(int emp_id, String emp_name, String post, String department, String gender, int rights, Date dob,
+	public Employee(int emp_id, String emp_name, String post, int department, String gender, int rights, Date dob,
 			String slot, String availible_slot, String password, String contact) {
 		super();
 		this.emp_id = emp_id;
 		this.emp_name = emp_name;
 		this.post = post;
-		this.department = department;
+		this.dept_id = department;
 		this.gender = gender;
 		this.rights = rights;
 		this.dob = dob;
@@ -52,11 +52,11 @@ public class Employee {
 	public void setPost(String post) {
 		this.post = post;
 	}
-	public String getDepartment() {
-		return department;
+	public int getDepartment() {
+		return dept_id;
 	}
-	public void setDepartment(String department) {
-		this.department = department;
+	public void setDepartment(int department) {
+		this.dept_id = department;
 	}
 	public String getGender() {
 		return gender;
@@ -102,7 +102,7 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [emp_id=" + emp_id + ", emp_name=" + emp_name + ", post=" + post + ", department=" + department
+		return "Employee [emp_id=" + emp_id + ", emp_name=" + emp_name + ", post=" + post + ", department=" + dept_id
 				+ ", gender=" + gender + ", rights=" + rights + ", dob=" + dob + ", slot=" + slot + ", availible_slot="
 				+ availible_slot + ", password=" + password + ", contact=" + contact + "]";
 	}
@@ -112,7 +112,7 @@ public class Employee {
 		int result = 1;
 		result = prime * result + ((availible_slot == null) ? 0 : availible_slot.hashCode());
 		result = prime * result + ((contact == null) ? 0 : contact.hashCode());
-		result = prime * result + ((department == null) ? 0 : department.hashCode());
+		result = prime * result + dept_id;
 		result = prime * result + ((dob == null) ? 0 : dob.hashCode());
 		result = prime * result + emp_id;
 		result = prime * result + ((emp_name == null) ? 0 : emp_name.hashCode());
@@ -142,10 +142,7 @@ public class Employee {
 				return false;
 		} else if (!contact.equals(other.contact))
 			return false;
-		if (department == null) {
-			if (other.department != null)
-				return false;
-		} else if (!department.equals(other.department))
+		if (dept_id != other.dept_id)
 			return false;
 		if (dob == null) {
 			if (other.dob != null)
@@ -183,7 +180,7 @@ public class Employee {
 			return false;
 		return true;
 	}
-    
+	
     
      
      

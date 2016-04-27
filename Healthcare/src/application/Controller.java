@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -19,6 +20,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class Controller {
+	
+	public static Employee employee = null;
 	
 	public static Stage stage ;
 
@@ -44,7 +47,8 @@ public class Controller {
          Connection connection = null;
          Statement statement = null; 
          String pass = null ;
-         //Employee employee = null;
+         String input = password.getText() ;
+         
          String query = "SELECT * FROM Employee WHERE emp_id=" + username.getText();
          try {           
              connection = JDBCMySQLConnection.getConnection();
@@ -52,10 +56,28 @@ public class Controller {
              rs = statement.executeQuery(query);
              	
              if (rs.next()) {
-                 //employee = new Employee();
+                 employee = new Employee();
                  pass = rs.getString("user_password");
+                 if(input.equals(pass))
+	                 {
+                	 	
+                	 	employee.emp_id = Integer.parseInt(rs.getString("emp_id"));
+                	 	employee.dept_id = Integer.parseInt(rs.getString("dept_id"));
+                	 	employee.emp_name = rs.getString("person_name");
+                	 	employee.post = rs.getString("post");
+                	 	employee.gender = rs.getString("gender");
+                	 	employee.rights = Integer.parseInt(rs.getString("rights"));
+                	 	employee.dob = Date.valueOf(rs.getString("dob"));
+                	 	employee.slot = rs.getString("slot");
+                	 	employee.availible_slot = rs.getString("avilable_slot");
+                	 	employee.password = rs.getString("user_password");
+                	 	employee.contact = rs.getString("contact");
 
-             }
+                	 	
+                			 
+	                 }
+                 }
+
          } catch (SQLException e) {
              e.printStackTrace();
          } finally {
@@ -68,7 +90,7 @@ public class Controller {
              }
          }
          
-         String input = password.getText() ;
+         
          System.out.println(input + " = " +pass);
          if(input.equals(pass))
          {

@@ -6,12 +6,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.sch_control">
    <children>
       <Button fx:id="back_schedule" layoutX="34.0" layoutY="27.0" mnemonicParsing="false" text="Back" />
       <Button fx:id="logout_schedule" layoutX="503.0" layoutY="27.0" mnemonicParsing="false" text="Logout" />
       <Text layoutX="34.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monday-Friday:" />
       <Text fx:id="slot_schedule" layoutX="33.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slots:" />
-      <Text fx:id="avail_schedule" layoutX="496.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="avail_schedule" layoutX="432.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slots are of 3 hours" />
+      <Text layoutX="378.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start time of the slots are given" />
    </children>
 </AnchorPane>

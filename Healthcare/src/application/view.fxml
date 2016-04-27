@@ -6,22 +6,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view_control">
    <children>
       <Text layoutX="48.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Hospital Management System" />
       <Text layoutX="48.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Your details" />
-      <Button fx:id="detail_view" layoutX="200.0" layoutY="173.0" mnemonicParsing="false" text="Show" />
+      <Button fx:id="detail_view" layoutX="200.0" layoutY="173.0" mnemonicParsing="false" onAction="#show_details" text="Show" />
       <Button fx:id="logout_view" layoutX="524.0" layoutY="32.0" mnemonicParsing="false" text="Logout" />
       <Text layoutX="50.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View your Schedule" />
-      <Button fx:id="sch_show_view" layoutX="200.0" layoutY="219.0" mnemonicParsing="false" text="Show" />
+      <Button fx:id="sch_show_view" layoutX="200.0" layoutY="219.0" mnemonicParsing="false" onAction="#show_schedule" text="Show" />
       <Text layoutX="45.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply for change in Schedule" />
-      <Button fx:id="sch_change_view" layoutX="276.0" layoutY="267.0" mnemonicParsing="false" text="Apply" />
+      <Button fx:id="sch_change_view" layoutX="276.0" layoutY="267.0" mnemonicParsing="false" onAction="#apply_change" text="Apply" />
       <Text fx:id="n_view" layoutX="141.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text layoutX="50.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello" />
       <Text layoutX="52.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have the following rights:" />
       <Text fx:id="patr_view" layoutX="289.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text fx:id="empr_view" layoutX="495.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Button fx:id="view_patient_view" layoutX="51.0" layoutY="332.0" mnemonicParsing="false" text="View/Modify Patient Record" />
-      <Button fx:id="view_emp_view" layoutX="347.0" layoutY="330.0" mnemonicParsing="false" text="View Modify Employee Record" />
+      <Button fx:id="view_patient_view" layoutX="51.0" layoutY="332.0" mnemonicParsing="false" onAction="#view_patient" text="View Patient Record" />
+      <Button fx:id="view_emp_view" layoutX="347.0" layoutY="330.0" mnemonicParsing="false" onAction="#view_employee" text="View Employee Record" />
    </children>
 </AnchorPane>

@@ -15,9 +15,9 @@ The designed relation is in BCNF
 
 1. Employee
 	* emp_id (Key)
+	* dept_id
 	* name
 	* post
-	* department
 	* gender
 	* rights
 	* dob
@@ -49,7 +49,6 @@ The designed relation is in BCNF
 	* date
 	* discription
 	* pay_id (F-key)
-	* queue (int)
 	
 5. Equipments
 	* eq_id (key)
@@ -61,8 +60,13 @@ The designed relation is in BCNF
 	* is_booked
 
 6. Payment
- 	* pay_id (key)
+ 	* pay_id (Key)
  	* amount 
  	* is_paid
  	* method
  	* discription
+ 
+7. Department 
+	* dept_name (Key)
+	* dept_id
+	* num_emp

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="524.0" layoutY="14.0" mnemonicParsing="false" text="Logout" />
+      <Text layoutX="252.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply Leave" />
+      <Text layoutX="138.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:" />
+      <Text layoutX="138.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date:" />
+      <DatePicker layoutX="292.0" layoutY="85.0" />
+      <DatePicker layoutX="292.0" layoutY="129.0" />
+      <Button layoutX="143.0" layoutY="188.0" mnemonicParsing="false" text="Done" />
+   </children>
+</AnchorPane>

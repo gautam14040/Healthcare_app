@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="back_schedule" layoutX="34.0" layoutY="27.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="logout_schedule" layoutX="503.0" layoutY="27.0" mnemonicParsing="false" text="Logout" />
+      <Text layoutX="34.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monday-Friday:" />
+      <Text fx:id="slot_schedule" layoutX="33.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slots:" />
+      <Text fx:id="avail_schedule" layoutX="496.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+   </children>
+</AnchorPane>

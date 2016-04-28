@@ -96,11 +96,7 @@ public class reception_control {
 
     }
 
-    @FXML
-    void view(ActionEvent event) {
-
-    }
-
+ 
     @FXML
     void new_pat(ActionEvent event) 
     {
@@ -110,7 +106,21 @@ public class reception_control {
     @FXML
     void appointment(ActionEvent event)
     {
-    	
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("Appointment_Record.fxml"));
+			Scene scene = new Scene(root);
+			appr_control.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    stage.setScene(scene);
+		    stage.show();
+		    
+		    appr_control.e1=e1;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Fail");
+		}
     }
     @FXML
     void payment_record(ActionEvent event) 

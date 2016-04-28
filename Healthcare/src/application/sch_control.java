@@ -34,12 +34,26 @@ public class sch_control {
         assert logout_schedule != null : "fx:id=\"logout_schedule\" was not injected: check your FXML file 'Schedule.fxml'.";
         
         String sh = new String(Controller.employee.slot);
+        System.out.println(sh);
         String res = new String();
         int t = 0 ;
         for (int i = 0; i < sh.length(); i++) {
-			if(sh.charAt(i) == '1' ){
+			if(sh.charAt(i) == '1' ){	
+				String day=new String();
+				day="AM";
+				if(i>=12)
+				{
+					day="PM";
+				}
 				t = i + 1 ;
-				res = res + t + 'h' + "\n";
+				String h=new String();
+				h=day;
+				if(t>=12)
+				{
+					h="PM";
+				}
+				int temr=t+3;
+				res = res + t +day+ " - " + temr + h + "\n";
 				i = i + 3 ;
 				}
 		}

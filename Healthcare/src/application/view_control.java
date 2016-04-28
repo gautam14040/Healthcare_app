@@ -15,7 +15,8 @@ import javafx.stage.Stage;
 
 public class view_control {
 
-    @FXML
+    public static Employee e1; 
+	@FXML
     private ResourceBundle resources;
 
     @FXML
@@ -101,7 +102,7 @@ public class view_control {
 		    stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			e.printStackTrace();
 			System.out.println("Fail");
 		}
 
@@ -119,6 +120,7 @@ public class view_control {
 
     @FXML
     void initialize() {
+    	n_view.setText(e1.getEmp_name());
         assert logout_view != null : "fx:id=\"logout_view\" was not injected: check your FXML file 'view.fxml'.";
         assert n_view != null : "fx:id=\"n_view\" was not injected: check your FXML file 'view.fxml'.";
         assert view_patient_view != null : "fx:id=\"view_patient_view\" was not injected: check your FXML file 'view.fxml'.";

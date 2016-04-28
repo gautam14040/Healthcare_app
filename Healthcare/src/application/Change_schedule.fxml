@@ -3,20 +3,21 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Change_Control">
    <children>
       <Button fx:id="back_change_schedule" layoutX="31.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
       <Button fx:id="logout_change_schedule" layoutX="507.0" layoutY="14.0" mnemonicParsing="false" text="Logout" />
       <Text layoutX="171.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slot 1:" />
       <Text layoutX="171.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slot 2:" />
       <Text layoutX="171.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slot 3:" />
-      <ComboBox fx:id="slot1_change_schedule" layoutX="286.0" layoutY="83.0" prefWidth="150.0" />
-      <ComboBox fx:id="slot2_change_schedule" layoutX="286.0" layoutY="125.0" prefWidth="150.0" />
-      <ComboBox fx:id="slot3_change_schedule" layoutX="286.0" layoutY="163.0" prefWidth="150.0" />
-      <Button fx:id="done_change_schedule" layoutX="361.0" layoutY="244.0" mnemonicParsing="false" text="Done" />
+      <ComboBox fx:id="slot1_change_schedule" layoutX="286.0" layoutY="83.0" prefWidth="150.0" promptText="choose" />  
+      <ComboBox fx:id="slot2_change_schedule" layoutX="286.0" layoutY="125.0" 	 prefWidth="150.0" promptText="choose" />
+      <ComboBox fx:id="slot3_change_schedule" layoutX="286.0" layoutY="163.0" prefWidth="150.0" promptText="choose" />
+      <Button fx:id="done_change_schedule" layoutX="361.0" layoutY="244.0" mnemonicParsing="false" onAction="#enter" text="Done" />
       <Text fx:id="error_change_schedule" layoutX="361.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Schedule" />
       <Text layoutX="42.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Note that slots are 3 hrs. long" />

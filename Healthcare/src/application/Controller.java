@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -39,9 +40,12 @@ public class Controller {
 
     @FXML
     private TextField username;
+    @FXML
+    private Text error;
 
     @FXML
     void login(ActionEvent event) {
+    	error.setText("");
     	System.out.println("Test");
     	 ResultSet rs = null;
          Connection connection = null;
@@ -79,7 +83,7 @@ public class Controller {
                  }
 
          } catch (SQLException e) {
-             e.printStackTrace();
+           //  e.printStackTrace();
          } finally {
              if (connection != null) {
                  try {
@@ -94,9 +98,12 @@ public class Controller {
          System.out.println(input + " = " +pass);
          if(input.equals(pass))
          {
-        	 username.setText("Pass");
+        	 System.out.println("here");
+        	 error.setText("Welcome");
         	 try {
             	Parent root ;
+            	view_control.e1=employee;
+            	Change_Control.e1=employee;
 				root = FXMLLoader.load(getClass().getResource("view.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
@@ -105,13 +112,14 @@ public class Controller {
 			}
          } 
          else 
-        	 username.setText("Fail");
+        	 error.setText("Incorrect Credentials");
          
         
     }
 
     @FXML
     void initialize() {
+    	error.setText("");
         assert password != null : "fx:id=\"password\" was not injected: check your FXML file 'Login.fxml'.";
         assert login != null : "fx:id=\"login\" was not injected: check your FXML file 'Login.fxml'.";
         assert username != null : "fx:id=\"username\" was not injected: check your FXML file 'Login.fxml'.";

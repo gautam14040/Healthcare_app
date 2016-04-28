@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 
 public class view_control {
 
+	public static Stage stage ;
+	
     public static Employee e1; 
 	@FXML
     private ResourceBundle resources;
@@ -52,10 +54,29 @@ public class view_control {
     @FXML
     void show_details(ActionEvent event) {
     	
-    	Stage stage = new Stage();
+    	//Stage stage = new Stage();
     	Parent root;
 		try {
 			root = FXMLLoader.load(getClass().getResource("Detail.fxml"));
+			Scene scene = new Scene(root);
+			Controller.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    stage.setScene(scene);
+		    stage.show();
+		    details_control.stage=stage;
+		    details_control.e1=e1;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println("Fail");
+		}
+	
+    }
+    @FXML
+    void logout(ActionEvent event) {
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 			Scene scene = new Scene(root);
 			Controller.stage = stage ;
 		    stage.setTitle("FXML Welcome");
@@ -66,13 +87,12 @@ public class view_control {
 			//e.printStackTrace();
 			System.out.println("Fail");
 		}
-	
     }
 
     @FXML
     void show_schedule(ActionEvent event) {
     	
-    	Stage stage = new Stage();
+    	//Stage stage = new Stage();
     	Parent root;
 		try {
 			root = FXMLLoader.load(getClass().getResource("Schedule.fxml"));
@@ -80,6 +100,8 @@ public class view_control {
 			Controller.stage = stage ;
 		    stage.setTitle("FXML Welcome");
 		    stage.setScene(scene);
+		    sch_control.stage=stage;
+		    sch_control.e1=e1;
 		    stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -91,7 +113,7 @@ public class view_control {
 
     @FXML
     void apply_change(ActionEvent event) {
-    	Stage stage = new Stage();
+    	//Stage stage = new Stage();
     	Parent root;
 		try {
 			root = FXMLLoader.load(getClass().getResource("Change_schedule.fxml"));
@@ -100,6 +122,7 @@ public class view_control {
 		    stage.setTitle("FXML Welcome");
 		    stage.setScene(scene);
 		    stage.show();
+		    Change_Control.stage=stage;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -110,6 +133,23 @@ public class view_control {
 
     @FXML
     void view_patient(ActionEvent event) {
+    	//Stage stage = new Stage();
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("Appointment.fxml"));
+			Scene scene = new Scene(root);
+			Controller.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    stage.setScene(scene);
+		    stage.show();
+		    app_control.stage=stage;
+		    app_control.e1=e1;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Fail");
+		}
+		
 
     }
 

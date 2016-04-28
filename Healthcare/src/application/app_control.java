@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Array;
 import java.sql.Connection;
@@ -13,11 +14,15 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class app_control {
 	
@@ -52,6 +57,41 @@ public class app_control {
     
     @FXML
     private ChoiceBox<String> doctor_box;
+    public static Stage stage; 
+    public static Employee e1;
+    @FXML
+    void logout(ActionEvent event) {
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Scene scene = new Scene(root);
+			Controller.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    stage.setScene(scene);
+		    stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println("Fail");
+		}
+    }
+    @FXML
+    void back(ActionEvent event) {
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("view.fxml"));
+			Scene scene = new Scene(root);
+			Controller.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    view_control.e1=e1;
+		    stage.setScene(scene);
+		    stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println("Fail");
+		}
+    }
     
     @FXML
     void done(ActionEvent event) {
@@ -71,6 +111,7 @@ public class app_control {
     	 		e.printStackTrace();
     	 	}
     }
+    
 
     @FXML
     void initialize() {

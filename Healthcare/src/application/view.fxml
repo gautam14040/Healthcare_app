@@ -11,7 +11,7 @@
       <Text layoutX="48.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Hospital Management System" />
       <Text layoutX="48.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Your details" />
       <Button fx:id="detail_view" layoutX="200.0" layoutY="173.0" mnemonicParsing="false" onAction="#show_details" text="Show" />
-      <Button fx:id="logout_view" layoutX="524.0" layoutY="32.0" mnemonicParsing="false" text="Logout" />
+      <Button fx:id="logout_view" layoutX="524.0" layoutY="32.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
       <Text layoutX="50.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View your Schedule" />
       <Button fx:id="sch_show_view" layoutX="200.0" layoutY="219.0" mnemonicParsing="false" onAction="#show_schedule" text="Show" />
       <Text layoutX="45.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply for change in Schedule" />

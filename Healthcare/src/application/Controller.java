@@ -107,6 +107,7 @@ public class Controller {
 				root = FXMLLoader.load(getClass().getResource("view.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
+				view_control.stage=stage;
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

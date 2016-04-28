@@ -1,8 +1,9 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -11,9 +12,13 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class Change_Control {
 
@@ -45,6 +50,10 @@ public class Change_Control {
     @FXML
     private ComboBox<Integer> slot1_change_schedule;
 
+
+    //public static Employee e1; 
+
+    public static Stage stage; 
     @FXML
     void enter(ActionEvent event) {
     	if(slot1_change_schedule.getValue()==null || slot3_change_schedule.getValue()==null || slot2_change_schedule.getValue()==null ||slot1_change_schedule.getValue()==slot2_change_schedule.getValue()||  
@@ -61,7 +70,7 @@ public class Change_Control {
     	String no="000";
     	Connection connection = null;
         Statement statement = null; 
-    	ResultSet rs = null;
+    	
     	String slot=new String();
     	for(int i=1;i<=6;i++)
     	{
@@ -93,6 +102,39 @@ public class Change_Control {
                     e.printStackTrace();
                   }
               }}
+    }
+    @FXML
+    void logout(ActionEvent event) {
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Scene scene = new Scene(root);
+			Controller.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    stage.setScene(scene);
+		    stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println("Fail");
+		}
+    }
+    @FXML
+    void back(ActionEvent event) {
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("view.fxml"));
+			Scene scene = new Scene(root);
+			Controller.stage = stage ;
+		    stage.setTitle("FXML Welcome");
+		    view_control.e1=e1;
+		    stage.setScene(scene);
+		    stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println("Fail");
+		}
     }
     @FXML
     void initialize() {

@@ -48,16 +48,6 @@ The designed relation is in BCNF
 	* slot
 	* date
 	* discription
-	* pay_id (F-key)
-	
-5. Equipments
-	* eq_id (key)
-	* emp_id (F key)
-	* p_id (F key)
-	* discription
-	* start_slot
-	* number_slots
-	* is_booked
 
 6. Payment
  	* pay_id (Key)
@@ -65,6 +55,7 @@ The designed relation is in BCNF
  	* is_paid
  	* method
  	* discription
+ 	* p_id
  
 7. Department 
 	* dept_name (Key)

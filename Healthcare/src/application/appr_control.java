@@ -85,26 +85,35 @@ public class appr_control {
 
     @FXML
 	void check(ActionEvent event) {
+    	error.setText("");
 		String p  = pid.getText();
 		String query = new String() ;
 		String name = new String();
 		String dname = new String();
+		int flag = 0 ;
 		String q2 = "SELECT person_name From Patient WHERE p_id="+p;
 		query = "SELECT * from Appointments WHERE p_id="+p;
 		try {
 			rs = statement.executeQuery(q2);
 			rs.next();
 			name = rs.getString(1);
+			flag = 1 ;
 			rs = statement.executeQuery(query);
 			
 		} catch (SQLException e) {
+			if(flag == 0)
 			error.setText("No such patient exists");
-			e.printStackTrace();
+			else
+			error.setText("No Appointment for the patient exists");
+			//e.printStackTrace();
 		}
 		
 		try {
 			if(rs.isLast()){
-				error.setText("Error 101 :No such patient exists");
+				if(flag == 0)
+					error.setText("No such patient exists");
+					else
+					error.setText("No Appointment for the patient exists");
 			}
 			
 			do{
@@ -123,8 +132,10 @@ public class appr_control {
 	    	}while(!rs.isLast());
 			
 		} catch (SQLException e) {
-			error.setText("Error 202 : No such patient exists");
-			e.printStackTrace();
+			if(flag == 0)
+				error.setText("No such patient exists");
+				else
+				error.setText("No Appointment for the patient exists");
 		}
 		
 	}

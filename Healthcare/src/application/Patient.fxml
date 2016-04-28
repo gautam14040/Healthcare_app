@@ -5,13 +5,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.reception_control">
    <children>
-      <Button fx:id="payment_patient" layoutX="58.0" layoutY="168.0" mnemonicParsing="false" text="Fees Payment" />
-      <Button fx:id="view_patient" layoutX="57.0" layoutY="210.0" mnemonicParsing="false" text="View Record" />
-      <Text layoutX="61.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Appointmentment" />
-      <Button fx:id="new_patient" layoutX="58.0" layoutY="87.0" mnemonicParsing="false" text="New Patient" />
-      <Button fx:id="existing_patient" layoutX="58.0" layoutY="127.0" mnemonicParsing="false" text="Existing Patient" />
+      <Button fx:id="payment_patient" layoutX="58.0" layoutY="168.0" mnemonicParsing="false" onAction="#fees_pay" text="Fees Payment" />
+      <Button fx:id="app_patient" layoutX="57.0" layoutY="210.0" mnemonicParsing="false" onAction="#appointment" text="View Appointments Record" />
+      <Text layoutX="210.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Appointmentment" />
+      <Button fx:id="new_patient" layoutX="58.0" layoutY="87.0" mnemonicParsing="false" onAction="#new_pat" text="New Patient" />
+      <Button fx:id="existing_patient" layoutX="58.0" layoutY="127.0" mnemonicParsing="false" onAction="#existing_pat" text="Existing Patient" />
+      <Button fx:id="back_reception" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Button fx:id="logout_reception" layoutX="524.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <Button layoutX="58.0" layoutY="253.0" mnemonicParsing="false" onAction="#payment_record" text="View Payment Record" />
    </children>
 </AnchorPane>

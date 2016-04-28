@@ -79,11 +79,11 @@ public class app_control {
     void back(ActionEvent event) {
     	Parent root;
 		try {
-			root = FXMLLoader.load(getClass().getResource("view.fxml"));
+			root = FXMLLoader.load(getClass().getResource("Patient.fxml"));
 			Scene scene = new Scene(root);
-			Controller.stage = stage ;
+			reception_control.stage = stage ;
 		    stage.setTitle("FXML Welcome");
-		    view_control.e1=e1;
+		    reception_control.e1=e1;
 		    stage.setScene(scene);
 		    stage.show();
 		} catch (IOException e) {

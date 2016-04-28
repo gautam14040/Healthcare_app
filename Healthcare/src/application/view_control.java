@@ -142,14 +142,14 @@ public class view_control {
     	//Stage stage = new Stage();
     	Parent root;
 		try {
-			root = FXMLLoader.load(getClass().getResource("Appointment.fxml"));
+			root = FXMLLoader.load(getClass().getResource("Patient.fxml"));
 			Scene scene = new Scene(root);
 			Controller.stage = stage ;
 		    stage.setTitle("FXML Welcome");
 		    stage.setScene(scene);
 		    stage.show();
-		    app_control.stage=stage;
-		    app_control.e1=e1;
+		    reception_control.stage=stage;
+		    reception_control.e1=e1;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

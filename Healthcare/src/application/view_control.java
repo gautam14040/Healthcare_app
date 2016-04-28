@@ -52,6 +52,12 @@ public class view_control {
     private Text empr_view;
 
     @FXML
+    private Button logout_existing;
+
+    @FXML
+    private Button back_existing;
+
+    @FXML
     void show_details(ActionEvent event) {
     	
     	//Stage stage = new Stage();

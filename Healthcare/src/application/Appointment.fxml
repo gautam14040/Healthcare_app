@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app_control">
+   <children>
+      <Text layoutX="92.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID" />
+      <TextField fx:id="pid_existing" layoutX="244.0" layoutY="38.0" />
+      <Text layoutX="95.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Date" />
+      <Text layoutX="95.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Slot" />
+      <Text layoutX="95.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" />
+      <DatePicker fx:id="date_existing" layoutX="244.0" layoutY="92.0" />
+      <ChoiceBox fx:id="slot_existing" layoutX="244.0" layoutY="157.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="department_existing" layoutX="244.0" layoutY="225.0" prefWidth="150.0" />
+      <Text layoutX="271.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Existing Patient" />
+      <Button fx:id="done_existing" layoutX="240.0" layoutY="323.0" mnemonicParsing="false" onAction="#done" text="Done" />
+      <Text fx:id="error_existing" layoutX="351.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="110.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor" />
+      <ChoiceBox fx:id="doctor_box" layoutX="247.0" layoutY="277.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

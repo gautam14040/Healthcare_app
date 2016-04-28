@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.form_control">
    <children>
       <Text layoutX="259.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient" />
       <Text layoutX="153.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
@@ -22,12 +22,17 @@
       <Text layoutX="154.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Slot" />
       <Text layoutX="156.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depatment" />
       <DatePicker fx:id="dob_new" layoutX="298.0" layoutY="113.0" />
-      <Button fx:id="done_new" layoutX="300.0" layoutY="355.0" mnemonicParsing="false" onAction="#new_patient_form" text="Done" />
+      <Button fx:id="done_new" layoutX="296.0" layoutY="457.0" mnemonicParsing="false" onAction="#new_patient_form" text="Done" />
       <DatePicker fx:id="appointment_new" layoutX="300.0" layoutY="223.0" />
       <ComboBox fx:id="department_new" layoutX="301.0" layoutY="302.0" prefWidth="150.0" />
-      <Text fx:id="error_new" layoutX="387.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="error_new" layoutX="413.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <ChoiceBox fx:id="slot_new" layoutX="301.0" layoutY="262.0" prefWidth="150.0" />
       <Button fx:id="back_form" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#back" text="Back" />
       <Button fx:id="logout_form" layoutX="524.0" layoutY="15.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <Text layoutX="177.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor" />
+      <ChoiceBox fx:id="doctor_box" layoutX="301.0" layoutY="347.0" prefWidth="150.0" />
+      <Button fx:id="show" layoutX="158.0" layoutY="459.0" mnemonicParsing="false" onAction="#show" text="Show doctor" />
+      <Text layoutX="178.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" />
+      <TextField fx:id="contact" layoutX="293.0" layoutY="405.0" />
    </children>
 </AnchorPane>

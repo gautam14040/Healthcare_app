@@ -130,7 +130,7 @@ public class payr_control {
             else
             {
             	System.out.println("Fail");
-           	 	error.setText( "Please enter a valid Patient ID"); 
+           	 	error.setText( "No Payment for give Patient ID"); 
             }
         } catch (SQLException e) {
               e.printStackTrace();

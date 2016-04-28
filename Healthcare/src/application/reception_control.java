@@ -101,6 +101,23 @@ public class reception_control {
     void new_pat(ActionEvent event) 
     {
 
+    	Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("Form.fxml"));
+			Scene scene = new Scene(root);
+			form_control.stage = stage ;
+			form_control.e1=e1;
+		    stage.setTitle("FXML Welcome");
+		    stage.setScene(scene);
+		    stage.show();
+		    
+		    appr_control.e1=e1;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Fail");
+		}
+
     }
 
     @FXML

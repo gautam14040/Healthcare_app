@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.appr_control">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.appr_control">
    <children>
       <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" text="Back" />
       <Button fx:id="logout" layoutX="524.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
       <Text layoutX="229.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last 10 appointments" />
       <Text layoutX="204.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID" />
       <TextField fx:id="pid" layoutX="293.0" layoutY="51.0" />
-      <Text fx:id="record" layoutX="76.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="record" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Button fx:id="check" layoutX="293.0" layoutY="94.0" mnemonicParsing="false" onAction="#check" text="Check" />
       <Text fx:id="error" layoutX="392.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>

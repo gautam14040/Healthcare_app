@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -26,6 +27,7 @@ import javafx.stage.Stage;
 
 public class app_control {
 	
+	public static HashMap<String,Integer> hash = new HashMap<>();
 	ResultSet rs = null;
     Connection connection = null;
     Statement statement = null; 
@@ -55,6 +57,47 @@ public class app_control {
     @FXML
     private Button done_existing;
     
+    
+
+    @FXML
+    void dept_select(ActionEvent event) {
+    	
+    }
+    
+    @FXML
+    void show(ActionEvent event) {
+    	 doctor_box.setVisible(true);
+    	 ArrayList<String> doctor = new ArrayList<String>();
+         
+         if(department_existing.getValue()!=null)
+         	 query = "SELECT person_name , emp_id FROM Employee natural join Department WHERE dept_id < 30 and dept_name=\""+department_existing.getValue() +"\"" ;
+         else
+             query = "SELECT person_name , emp_id FROM Employee natural join Department WHERE dept_id < 30" ;
+
+         rs = null;
+    	 	try {
+ 			rs = statement.executeQuery(query);
+ 			do{
+             	rs.next();
+             	String d = (rs.getString(1));
+             	doctor.add(d);
+             	int id = rs.getInt(2);
+             	hash.put(d,id);
+                 System.out.println(rs.getString(1));
+
+             }while(!rs.isLast());
+ 			
+ 		} catch (SQLException e) {
+ 			e.printStackTrace();
+ 			error_existing.setText("Error"); 
+ 		}
+    	 	
+    	 doctor_box.setItems(FXCollections.observableArrayList(doctor));
+    }
+    
+    
+    
+    
     @FXML
     private ChoiceBox<String> doctor_box;
     public static Stage stage; 
@@ -72,6 +115,7 @@ public class app_control {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
+			error_existing.setText("Error"); 
 			System.out.println("Fail");
 		}
     }
@@ -81,7 +125,7 @@ public class app_control {
 		try {
 			root = FXMLLoader.load(getClass().getResource("Patient.fxml"));
 			Scene scene = new Scene(root);
-			reception_control.stage = stage ;
+			Controller.stage = stage ;
 		    stage.setTitle("FXML Welcome");
 		    reception_control.e1=e1;
 		    stage.setScene(scene);
@@ -89,26 +133,35 @@ public class app_control {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
+			error_existing.setText("Error"); 
 			System.out.println("Fail");
 		}
     }
     
     @FXML
     void done(ActionEvent event) {
+    	done_existing.setDisable(true);
     	int pid = Integer.parseInt(pid_existing.getText());
     	String name = doctor_box.getValue();
     	int slot = slot_existing.getValue();
-    	String date = date_existing.getValue().toString() ;
+    	String date = date_existing.getValue().toString();
+    	//date.trim();
+    	//String dd = ""+date_existing.getValue().getYear() + date_existing.getValue().getMonthValue() + date_existing.getValue().getDayOfMonth();
     	String dept = department_existing.getValue();
+    	java.util.Date d = new java.util.Date();
+    	int app_id = (int)d.getTime()%10000;
+    	int emp_id = hash.get(name);
     	
-    	 	query = "SELECT person_name FROM Employee WHERE dept_id < 30" ;
-    	 	rs = null;
+    	 	query = "Insert into Appointments values (null" + ","+ pid + "," + emp_id + "," + slot +"," + "\""+ date + "\""+ ",null)" ;
+    	 	System.out.println(query);
+    	 	int r = 0;
     	 	try {
- 			rs = statement.executeQuery(query);
+ 			r = statement.executeUpdate(query);
     	 	}
     	 	catch(Exception e)
     	 	{
     	 		e.printStackTrace();
+    	 		 error_existing.setText("Error"); 
     	 	}
     }
     
@@ -122,7 +175,8 @@ public class app_control {
         assert department_existing != null : "fx:id=\"department_existing\" was not injected: check your FXML file 'Appointment.fxml'.";
         assert done_existing != null : "fx:id=\"done_existing\" was not injected: check your FXML file 'Appointment.fxml'.";
         assert doctor_box != null : "fx:id=\"doctor_box\" was not injected: check your FXML file 'Appointment.fxml'.";
-        
+        done_existing.setDisable(false);
+        error_existing.setText(""); 
         ArrayList<Integer> x1 = new ArrayList<Integer>();
         
         for(int i=0 ; i < 18 ; i++)
@@ -151,24 +205,9 @@ public class app_control {
         }
         
         department_existing.setItems(FXCollections.observableArrayList(dept));
+        doctor_box.setVisible(false);
 
-        ArrayList<String> doctor = new ArrayList<String>();
-        query = "SELECT person_name FROM Employee WHERE dept_id < 30" ;
-   	 	rs = null;
-   	 	try {
-			rs = statement.executeQuery(query);
-			do{
-            	rs.next();
-            	doctor.add(rs.getString(1));
-                System.out.println(rs.getString(1));
-
-            }while(!rs.isLast());
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-   	 	
-   	 doctor_box.setItems(FXCollections.observableArrayList(doctor));
+       
         
     }
 }

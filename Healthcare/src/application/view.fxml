@@ -22,6 +22,5 @@
       <Text fx:id="patr_view" layoutX="289.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text fx:id="empr_view" layoutX="495.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Button fx:id="view_patient_view" layoutX="51.0" layoutY="332.0" mnemonicParsing="false" onAction="#view_patient" text="View Patient Record" />
-      <Button fx:id="view_emp_view" layoutX="347.0" layoutY="330.0" mnemonicParsing="false" onAction="#view_employee" text="View Employee Record" />
    </children>
 </AnchorPane>

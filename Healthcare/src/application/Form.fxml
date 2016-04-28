@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="252.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient" />
+      <Text layoutX="153.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="name_new" layoutX="300.0" layoutY="49.0" />
+      <TextField fx:id="gender_new" layoutX="300.0" layoutY="80.0" />
+      <Text layoutX="153.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+      <Text layoutX="153.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth" />
+      <TextField fx:id="kname_new" layoutX="299.0" layoutY="150.0" />
+      <Text layoutX="152.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closest kin's name" />
+      <TextField fx:id="kcontact_new" layoutX="299.0" layoutY="186.0" />
+      <Text layoutX="152.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kin's Contact" />
+      <Text layoutX="152.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Date" />
+      <Text layoutX="154.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Slot" />
+      <Text layoutX="156.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depatment" />
+      <DatePicker fx:id="dob_new" layoutX="298.0" layoutY="113.0" />
+      <Button fx:id="done_new" layoutX="300.0" layoutY="355.0" mnemonicParsing="false" onAction="#new_patient_form" text="Done" />
+      <DatePicker fx:id="appointment_new" layoutX="300.0" layoutY="223.0" />
+      <ComboBox fx:id="department_new" layoutX="301.0" layoutY="302.0" prefWidth="150.0" />
+      <Text fx:id="error_new" layoutX="387.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ChoiceBox fx:id="slot_new" layoutX="301.0" layoutY="262.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
